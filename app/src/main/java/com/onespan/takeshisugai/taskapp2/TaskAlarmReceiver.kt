@@ -18,6 +18,7 @@ import java.util.*
 import android.app.AlarmManager
 import android.app.PendingIntent
 
+import com.onespan.takeshisugai.taskapp2.*
 
 class TaskAlarmReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context?, intent: Intent?) {

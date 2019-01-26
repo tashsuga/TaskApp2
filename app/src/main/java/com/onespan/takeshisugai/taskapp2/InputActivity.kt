@@ -9,6 +9,7 @@ import android.view.View
 import io.realm.Realm
 import kotlinx.android.synthetic.main.content_input.*
 import java.util.*
+
 import android.app.AlarmManager
 import android.app.PendingIntent
 import android.content.Intent
@@ -121,6 +122,7 @@ class InputActivity : AppCompatActivity() {
         }
     }
 
+    /*
     private fun addTask() {
         val realm = Realm.getDefaultInstance()
 
@@ -155,5 +157,6 @@ class InputActivity : AppCompatActivity() {
 
         realm.close()
     }
+    */
 }
 
