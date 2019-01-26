@@ -1,5 +1,17 @@
 package com.onespan.takeshisugai.taskapp2
 
+import android.content.BroadcastReceiver
+import android.content.Context
+import android.content.Intent
+import android.util.Log
+
+class TaskAlarmReceiver : BroadcastReceiver() {
+    override fun onReceive(context: Context?, intent: Intent?) {
+        Log.d("TaskApp", "onReceive")
+    }
+}
+
+/*
 //package jp.techacademy.taro.kirameki.taskapp
 
 import android.content.BroadcastReceiver
@@ -82,3 +94,4 @@ class TaskAlarmReceiver : BroadcastReceiver() {
         PendingIntent.FLAG_UPDATE_CURRENT
     )
 }
+*/

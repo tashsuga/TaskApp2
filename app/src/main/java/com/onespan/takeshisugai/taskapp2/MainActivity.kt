@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
             // 入力・編集する画面に遷移させる
             val task = parent.adapter.getItem(position) as Task
             val intent = Intent(this@MainActivity, InputActivity::class.java)
-            intent.putExtra(EXTRA_TASK, task.id)
+            intent.putExtra(getEXTRA_TASK(), task.id)
             startActivity(intent)
         }
 
