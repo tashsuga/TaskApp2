@@ -30,7 +30,7 @@
                 android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
-                    android:value="com.onespan.takeshisugai.taskapp2.MainActivity"/
+                    android:value="com.onespan.takeshisugai.taskapp2.MainActivity"/>
                     <!--android:value="jp.techacademy.taro.kirameki.taskapp.MainActivity"/>-->
         </activity>
 
