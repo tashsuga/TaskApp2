@@ -3,14 +3,12 @@ package com.onespan.takeshisugai.taskapp2
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity;
-import android.view.Menu
-import android.view.MenuItem
 import io.realm.Realm
 import kotlinx.android.synthetic.main.activity_main.*
 import io.realm.RealmChangeListener
 import io.realm.Sort
 
-import kotlinx.android.synthetic.main.activity_main.*
+
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
@@ -38,14 +36,13 @@ class MainActivity : AppCompatActivity() {
 
         // Realmの設定
         mRealm = Realm.getDefaultInstance()
-        mRealm.addChangeListener(mRealmListener
-
-
+        mRealm.addChangeListener(mRealmListener )
 
         // ListViewの設定
-        mTaskAdapter = TaskAdapter(this@MainActivity)
+       // mTaskAdapter = TaskAdapter(this@MainActivity)
+                mTaskAdapter = TaskAdapter(this@MainActivity)
 
-        // ListViewをタップしたときの処理
+                // ListViewをタップしたときの処理
         listView1.setOnItemClickListener { parent, view, position, id ->
             // 入力・編集する画面に遷移させる
         }
