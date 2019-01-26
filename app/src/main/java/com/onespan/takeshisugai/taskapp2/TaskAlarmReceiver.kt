@@ -71,4 +71,13 @@ class TaskAlarmReceiver : BroadcastReceiver() {
         val alarmManager = getSystemService(ALARM_SERVICE) as AlarmManager
         alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.timeInMillis, resultPendingIntent)
     }
+
+    val resultIntent = Intent(applicationContext, TaskAlarmReceiver::class.java)
+    resultIntent.putExtra(EXTRA_TASK, mTask!!.id)
+    val resultPendingIntent = PendingIntent.getBroadcast(
+        this,
+        mTask!!.id,
+        resultIntent,
+        PendingIntent.FLAG_UPDATE_CURRENT
+    )
 }
