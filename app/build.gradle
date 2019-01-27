@@ -10,13 +10,25 @@ android {
     defaultConfig {
         applicationId "com.onespan.takeshisugai.taskapp2"
         minSdkVersion 19
-        // minSdkVersion 24
+        //minSdkVersion 24
          targetSdkVersion 28
         //targetSdkVersion 19
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+    configurations.all {
+        resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+            def requested = details.requested
+            if (requested.group == "com.android.support") {
+                if (!requested.name.startsWith("multidex")) {
+                    details.useVersion "26.+"
+                }
+            }
+        }
+    }
+
+
     buildTypes {
         release {
             minifyEnabled false
