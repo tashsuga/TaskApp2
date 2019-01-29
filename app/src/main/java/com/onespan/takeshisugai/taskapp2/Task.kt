@@ -14,7 +14,7 @@ open class Task : RealmObject(), Serializable {
 
     // categoryというStringプロパティ
 
-   // var category: String = ""
+   var category: String = ""
 
     // id をプライマリーキーとして設定
     @PrimaryKey
