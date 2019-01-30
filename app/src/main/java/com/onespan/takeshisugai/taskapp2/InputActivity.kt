@@ -135,6 +135,10 @@ class InputActivity : AppCompatActivity() {
         val date = calendar.time
         mTask!!.date = date
 
+        //30th/Jan/
+
+        mTask!!.category = category_edit_text.toString()
+
         realm.copyToRealmOrUpdate(mTask!!)
         realm.commitTransaction()
 

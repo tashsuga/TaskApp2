@@ -11,13 +11,29 @@ import java.util.Date
 import io.realm.RealmObject
 import io.realm.annotations.PrimaryKey
 
+/*
 private open class Task(var realmObject: this,// Realm全体の初期化
                         val realm: Realm? = Realm.getInstance()
 ) : RealmObject(), Serializable, Parcelable {
     var title: String = ""      // タイトル
     var contents: String = ""   // 内容
     var date: Date = Date()     // 日時
+*/
 
+
+open class Task : RealmObject(), Serializable {
+
+    var title: String = ""      // タイトル
+    var contents: String = ""   // 内容
+    var date: Date = Date()     // 日時
+    var category: String = ""      // カテゴリ
+
+    // id をプライマリーキーとして設定
+    @PrimaryKey
+    var id: Int = 0
+
+
+    /*
     // categoryというStringプロパティ
 
    var category: String
@@ -27,7 +43,9 @@ private open class Task(var realmObject: this,// Realm全体の初期化
     // id をプライマリーキーとして設定
     @PrimaryKey
     var id: Int = 0
+*/
 
+    /*
     constructor(parcel: Parcel) : this(
         TODO("realmObject"),
         TODO("realm")
@@ -37,7 +55,7 @@ private open class Task(var realmObject: this,// Realm全体の初期化
         category = parcel.readString()
         id = parcel.readInt()
     }
-
+*/
 
 // このスレッドのためのRealmインスタンスを取得
    // Realm realm = Realm.getDefaultInstance();
@@ -52,6 +70,8 @@ private open class Task(var realmObject: this,// Realm全体の初期化
     person.getDogs().add(managedDog);
     realm.commitTransaction();
     */
+
+    /*
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(title)
         parcel.writeString(contents)
@@ -72,6 +92,7 @@ private open class Task(var realmObject: this,// Realm全体の初期化
             return arrayOfNulls(size)
         }
     }
+*/
 
 
 }
