@@ -119,6 +119,7 @@ class InputActivity : AppCompatActivity() {
         realm.copyToRealmOrUpdate(mTask!!)
         realm.commitTransaction()
         realm.close()
+
         // added 27th/Jan.
         val resultIntent = Intent(applicationContext, TaskAlarmReceiver::class.java)
         resultIntent.putExtra(EXTRA_TASK, mTask!!.id)

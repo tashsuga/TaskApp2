@@ -36,6 +36,7 @@
                     <!--android:value="jp.techacademy.taro.kirameki.taskapp.MainActivity"/>-->
         </activity>
 
+        <receiver android:name=".TaskAlarmReceiver"/>
 <!--
         <activity android:name=".InputActivity">
         </activity>-->
