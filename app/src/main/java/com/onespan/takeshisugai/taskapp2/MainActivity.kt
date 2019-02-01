@@ -62,6 +62,9 @@ class MainActivity : AppCompatActivity() {
             listView1.adapter = mTaskAdapter
             // 表示を更新するために、アダプターにデータが変更されたことを知らせる
             mTaskAdapter.notifyDataSetChanged()
+
+
+
         }
 
         // ListViewを長押ししたときの処理
